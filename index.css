@@ -1,0 +1,78 @@
+
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     background-image: url("table.png");
+     background-size: cover;
+     /* center the wrapper and provide some top/bottom space */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     padding: 40px 20px;
+     color: aliceblue;
+}
+
+h1{
+    color:goldenrod;
+}
+
+/* content-sized centered container with border */
+.wrapper{
+    background: rgba(0,0,0,0.45); /* slight dark overlay so text is readable */
+    border: 3px solid gray;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(255,255,255,0.08);
+    padding: 24px 36px;
+    max-width: 520px;
+    width: fit-content; /* shrink to the content width */
+    text-align: center;
+}
+
+p{
+    margin-top: 8px;
+    font-size: 1.3rem;
+}
+
+#message-el{
+    font-style: italic;
+}
+
+button{
+    margin-top: 10px;
+    color:#016f32;
+    background-color: goldenrod;
+    width:150px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow:2px 2px 4px rgb(112, 95, 50);
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    /* smooth press animation */
+    transition: transform 120ms ease, box-shadow 120ms ease;
+    transform-origin: center;
+}
+
+.controls{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom:15px;
+}
+
+/* scale the button down when clicked/pressed */
+button:active{
+    transform: scale(0.9);
+    /* slightly reduce shadow to match the pressed look */
+    box-shadow:1px 1px 2px rgba(112,95,50,0.6);
+}
