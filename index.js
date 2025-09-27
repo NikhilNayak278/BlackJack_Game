@@ -6,8 +6,18 @@ let message = "";
 let player={
     name:"Nikhil Nayak:",
     chips:145
-
 }
+
+// Wait for DOM to be fully loaded before accessing elements
+document.addEventListener('DOMContentLoaded', function() {
+    const userName = document.getElementById("user-name");
+    
+    let Name = prompt("Enter your name");
+    if (Name != null) {
+        player.name = Name;
+    }
+    userName.textContent = player.name;
+});
 
 function getRandomcard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
